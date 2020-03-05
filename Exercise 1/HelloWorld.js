@@ -1,1 +1,5 @@
-console.log('Hello World!!!');
+sayingHelloWorld();
+
+function sayingHelloWorld() {
+    console.log('Hello World!!!');
+}
