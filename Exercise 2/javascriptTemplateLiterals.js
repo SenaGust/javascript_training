@@ -4,3 +4,14 @@ const people = [
   { name: 'August', age: 30 }
 ];
 
+ function HowOldAre(people) {
+  return `${people.name} is ${people.age} years old`;
+ };
+
+ function write() {
+  people.forEach(person => {
+    console.log(HowOldAre(person));
+  });
+ }
+
+ write();
