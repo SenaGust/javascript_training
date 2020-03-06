@@ -1,8 +1,8 @@
-const expectExport = require("expect");
+const { sayingHelloWorld } = require('./HelloWorld');
 
 describe('function sayingHelloWorld', () => {
     it('should show Hello World', () => {
         const result = sayingHelloWorld();
-        expectExport(result).toBe('Hello World!');
+        expect(result).toBe('Hello World!');
     })
 });
