@@ -8,11 +8,12 @@ const people = [
   return `${people.name} is ${people.age} years old`;
  };
 
- function write() {
+ function Write() {
   people.forEach(person => {
     console.log(HowOldAre(person));
   });
  }
 
+ Write();
 
  module.exports = {HowOldAre, Write, people};
