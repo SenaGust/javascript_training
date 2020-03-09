@@ -4,8 +4,8 @@ const people = [
   { name: 'August', age: 30 }
 ];
 
- function HowOldAre(people) {
-  return `${people.name} is ${people.age} years old`;
+ function HowOldAre(person) {
+  return `${person.name} is ${person.age} years old`;
  };
 
  function Write() {

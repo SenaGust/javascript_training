@@ -1,21 +1,37 @@
 const { Write, HowOldAre } = require('./javascriptTemplateLiterals');
 
 describe('function HowOldAre', () => {
-    it('should show the name and the old of a person', () => {
+    it('should show the name and the old of one person', () => {
         const result = HowOldAre({ name: 'John', age: 30 });
         expect(result).toBe('John is 30 years old');
     })
 });
 
 describe('function Write', () => {
-    it('should show the data of all people', () => {
-        const result = Write([
-            { name: 'John', age: 30 },
-            { name: 'Marie', age: 22 },
-            { name: 'August', age: 30 }
-          ]);
-        expect(result).toBe(`John is 30 years old
-        Marie is 22 years old
-        August is 30 years old`);
+    it('should show the result mocking HowOldAre', () => {
+        console.log = jest.fn()
+        const HowOldAre = jest.fn();
+        HowOldAre.mockReturnValueOnce("John is 30 years old")
+        .mockReturnValueOnce("Marie is 22 years old")
+        .mockReturnValueOnce("August is 30 years old");
+
+        Write();
+        expect(console.log).toHaveBeenCalledTimes(3)
+        expect(console.log).toHaveBeenNthCalledWith(1,"John is 30 years old")
+        expect(console.log).toHaveBeenNthCalledWith(2,"Marie is 22 years old")
+        expect(console.log).toHaveBeenNthCalledWith(3,"August is 30 years old")
+        
+    })
+});
+
+describe('function Write', () => {
+    it('should show the data of all people without mock HowOldAre', () => {
+        console.log = jest.fn()
+
+        Write();
+        expect(console.log).toHaveBeenCalledTimes(3)
+        expect(console.log).toHaveBeenNthCalledWith(1,"John is 30 years old")
+        expect(console.log).toHaveBeenNthCalledWith(2,"Marie is 22 years old")
+        expect(console.log).toHaveBeenNthCalledWith(3,"August is 30 years old")
     })
 });
