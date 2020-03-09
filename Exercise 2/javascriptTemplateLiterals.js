@@ -14,4 +14,5 @@ const people = [
   });
  }
 
- write();
+
+ module.exports = {HowOldAre, Write, people};
