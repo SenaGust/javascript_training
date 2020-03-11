@@ -10,7 +10,7 @@ const helper = {
    },
   Write() {
   people.forEach(person => {
-    console.log(teste.HowOldAre(person));
+    console.log(HowOldAre(person));
    }
   )},
 };
