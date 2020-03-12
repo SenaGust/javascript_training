@@ -10,9 +10,9 @@ describe('function HowOldAre', () => {
 describe('function Write', () => {
     it('should show the result mocking HowOldAre', () => {
         console.log = jest.fn();
-        const spyHowOldAreYou = jest.spyOn(teste, 'HowOldAre');
+        const spyHowOldAreYou = jest.spyOn(helper, 'HowOldAre');
 
-        Write();
+        helper.Write();
 
         expect(spyHowOldAreYou).toHaveBeenCalledTimes(3);
         expect(spyHowOldAreYou).toHaveBeenNthCalledWith(1,{ name: 'John', age: 30 });
