@@ -7,7 +7,7 @@ function power(num) {
   }
   
   function theFunction(fn, num) {
-    // ??????
+    return fn(num);
   }
     
   module.exports={theFunction, tenTimes, power}

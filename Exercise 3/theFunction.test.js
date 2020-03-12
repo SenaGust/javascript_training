@@ -1,26 +1,36 @@
 const {power, tenTimes, theFunction} = require ('./theFunction');
 
 describe('function theFunction', () => {
-    it('return 100', () => {
-      const result = theFunction(power, 10);
-      expect(result).toBe(100);
+    it('should return 100 when I pass 10', () => {
+      const usedParameter = 10;
+      const power = jest.fn();
+
+      theFunction(power, usedParameter);
+      
+      expect(power).toHaveBeenCalledTimes(1);
+      expect(power).toHaveBeenCalledWith(usedParameter);
     })
-    it('return 70', () => {
-        const result = theFunction(tenTimes, 7);
+    it('should return 70 when I pass 7', () => {
+      const usedParameter = 7;
+      const tenTimes = jest.fn();
+
+      theFunction(tenTimes, 7);
+      
+      expect(tenTimes).toHaveBeenCalledTimes(1);
+      expect(tenTimes).toHaveBeenCalledWith(usedParameter);
+    })
+});
+
+describe('function tenTimes', () => {
+    it('should return 70 when I pass 7', () => {
+        const result = tenTimes(7);
         expect(result).toBe(70);
       })
 });
 
-describe('function tenTimes', () => {
-    it('return 80', () => {
-        const result = tenTimes(8);
-        expect(result).toBe(80);
-      })
-});
-
 describe('function power', () => {
-    it('return 10000', () => {
-        const result = power(100);
-        expect(result).toBe(10000);
+    it('should return 100 when I pass 100', () => {
+        const result = power(10);
+        expect(result).toBe(100);
       })
 });
