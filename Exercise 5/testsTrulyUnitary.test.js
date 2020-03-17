@@ -11,9 +11,9 @@ describe('function makeString', () => {
         .mockImplementation((num1, num2) => num1 * num2);
 
         const result = makeString(parameter1, parameter2, parameter3);
-
-        expect(multiply).toHaveBeenCalledWith(parameter2, parameter3);
+        
         expect(multiply).toHaveBeenCalledTimes(1);
+        expect(multiply).toHaveBeenCalledWith(parameter2, parameter3);
         expect(result).toEqual(expectedResult);
     })
 })
