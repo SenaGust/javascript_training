@@ -7,6 +7,5 @@ function makeString(string, number1, number2) {
 
     return (string +  multiplication.multiply(number1, number2));
 }
-console.log(makeString('o',4,4))
 
 module.exports = {makeString};
