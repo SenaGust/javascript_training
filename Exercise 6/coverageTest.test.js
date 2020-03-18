@@ -2,14 +2,16 @@ const {makeString} = require('./coverageTest');
 const multiplication = require('../Exercise 4/multiplication')
 
 describe('function makeString for exercise 6', () => {
-    it('should return the string "O resultado é: 4" ', () => {
+    it('should return the string "O resultado é: 4" (using if)', () => {
         const parameter1 = 'O resultado é: ',
         parameter2 = 4,
         parameter3 = 4,
         expectedResult = 'O resultado é: 4';
 
         const multiply = jest.spyOn(multiplication, 'multiply');
-        Math.pow = jest.fn();
+        Math.pow = jest.fn()
+        .mockReturnValueOnce(2)
+        .mockReturnValueOnce(2);
 
         const result = makeString(parameter1, parameter2, parameter3);
 
