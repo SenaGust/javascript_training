@@ -16,4 +16,32 @@ describe('function sumSquare', () => {
         expect(Math.pow).toHaveBeenNthCalledWith(2, parameter2, 1/2);
         expect(result).toEqual(expectedResult);
     });
+    it('should return error', () => {
+        const parameter1 = 'kk',
+        parameter2 = 4,
+        expectedResult = 'TypeError';
+        
+        Math.pow = jest.fn();
+
+        try {
+            sumSquare(parameter1, parameter2);
+        } catch (error) {
+            expect(Math.pow).toHaveBeenCalledTimes(0);
+            expect(error).toEqual(expectedResult);
+        } 
+    });
+    it('should return error', () => {
+        const parameter1 = 4,
+        parameter2 = 'kk',
+        expectedResult = 'TypeError';
+
+        Math.pow = jest.fn();
+
+        try {
+            sumSquare(parameter1, parameter2);
+        } catch (error) {
+            expect(Math.pow).toHaveBeenCalledTimes(0);
+            expect(error).toEqual(expectedResult);
+        } 
+    });
 });
