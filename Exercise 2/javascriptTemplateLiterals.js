@@ -1,3 +1,5 @@
+import HowOldAre from './functionHowOldAreYou'
+
 const people = [
   { name: 'John', age: 30 },
   { name: 'Marie', age: 22 },
@@ -6,7 +8,7 @@ const people = [
 
 function Write() {
   people.forEach(person => {
-    console.log(this.HowOldAre(person));
+    console.log(HowOldAre(person));
    }
   )
 }
