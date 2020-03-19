@@ -4,15 +4,11 @@ const people = [
   { name: 'August', age: 30 }
 ];
 
-const helper = {
-  HowOldAre(person) {
-    return `${person.name} is ${person.age} years old`;
-   },
-  Write() {
+function Write() {
   people.forEach(person => {
     console.log(this.HowOldAre(person));
    }
-  )},
-};
+  )
+}
 
- module.exports = {helper};
+export default Write;
