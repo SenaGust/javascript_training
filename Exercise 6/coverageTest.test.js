@@ -1,5 +1,6 @@
-const {makeString} = require('./coverageTest');
-const multiplication = require('../Exercise 4/multiplication')
+import makeString from './coverageTest';
+import multiply from '../Exercise 4/multiplication';
+import sumSquare from './sumSquare';
 
 describe('function makeString for exercise 6', () => {
     it('should return the string "O resultado é: 4" (using if)', () => {
@@ -37,4 +38,4 @@ describe('function makeString for exercise 6', () => {
         expect(multiply).toHaveBeenNthCalledWith(1, parameter2, parameter3);
         expect(result).toEqual(expectedResult);
     });
-})
+});

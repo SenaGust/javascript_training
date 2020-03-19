@@ -1,4 +1,5 @@
 function sayingHelloWorld() {
     return 'Hello World!';
 }
-module.exports={sayingHelloWorld};
+
+export default sayingHelloWorld;

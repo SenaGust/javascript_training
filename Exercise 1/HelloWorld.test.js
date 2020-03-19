@@ -1,4 +1,4 @@
-const { sayingHelloWorld } = require('./HelloWorld');
+import sayingHelloWorld from './HelloWorld';
 
 describe('function sayingHelloWorld', () => {
     it('should show Hello World', () => {
