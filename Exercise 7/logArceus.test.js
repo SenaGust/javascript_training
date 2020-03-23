@@ -1,12 +1,13 @@
 import logArceus from './logArceus';
+import getName from './promise';
+jest.mock('./promise');
 
 describe('function logArceus', () => {
     it('return Arceus on console.log', () => {
-        console.log = jest.fn();
+        getName.mockReturnValue(Promise.resolve('Arceus'));
 
         logArceus();
-
-        expect(console.log).toHaveBeenCalledWith('Arceus');
-        expect(console.log).toHaveBeenCalledTimes(1);
+        
+        expect(getName).toHaveBeenCalledTimes(1);
     });
 });
