@@ -1,5 +1,3 @@
-const baseUrlAPI = 'https://www.breakingbadapi.com/api/';
-
 const mockCharacters = 
 [
     {
@@ -1230,4 +1228,4 @@ const mockCharacters =
     }
   ];
 
-export default baseUrlAPI;
+export default mockCharacters;
