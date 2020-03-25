@@ -6,7 +6,7 @@ import axios from 'axios'
 jest.mock('axios');
 
 describe('function returnAllCharacters', () => {
-    it('should show the all characters in console', async () => {
+    it('should return all characters', async () => {
         axios.get.mockResolvedValue(mockCharacters);
 
         const result = await returnAllCharacters();
