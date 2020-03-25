@@ -1,6 +1,7 @@
 import baseUrlAPI from '../Breaking Bad API/url';
+import axios from 'axios';
 
-function returnAllEpisodes() {
+async function returnAllEpisodes() {
     return await axios.get(baseUrlAPI+'episodes');
 }
 

@@ -1,8 +1,7 @@
 import mockEpisodes from '../Breaking Bad API/jsonEpisodes';
-import getAllEpisodes from './getAllEpisodes';
+import returnAllEpisodes from './getAllEpisodes';
 import baseUrlAPI from '../Breaking Bad API/url';
 import axios from 'axios'
-
 jest.mock('axios');
 
 describe('function returnAllEpisodes', () => {
