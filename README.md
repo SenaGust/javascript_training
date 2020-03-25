@@ -87,3 +87,28 @@ Exercise 8
   Create two functions that return 'Hello ' concatenated with the return of the getName() function.
 
   One of them should use the then syntax and the other one the async/await syntax.
+
+Exercise 9
+
+  Use the Breaking Bad API and write a function that returns the number of characters that existe on this TV show.
+
+Exercise 10
+
+  Use the Breaking Bad API to return all of the name of the characters, sorted alphabetically.
+
+Exercise 11
+
+  Use the  Breaking Bad API and return the name of the episodes grouped by the first letter. Ignore the letter that have no episodes. For instance, given the episode names:
+
+  "Something", "Something 2", "Especial delivery"
+
+  the expect return would be
+
+  {
+    "E": 1,
+    "S": 2
+  }
+
+Exercise 12
+
+  Repeate the exercises 9, 10 and 11 but this time using the `lodash` library.
