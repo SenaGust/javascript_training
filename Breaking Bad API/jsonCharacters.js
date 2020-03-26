@@ -612,7 +612,7 @@ const mockCharacters =
     },
     {
       "char_id": 31,
-      "name": "Adam Pinkman",
+      "name": "adam Pinkman",
       "birthday": "Unknown",
       "occupation": [
         "unknown"
@@ -1042,7 +1042,7 @@ const mockCharacters =
     },
     {
       "char_id": 54,
-      "name": "Duane Chow",
+      "name": "duane Chow",
       "birthday": "Unknown",
       "occupation": [
         "Owner of Golden Moth Chemical"

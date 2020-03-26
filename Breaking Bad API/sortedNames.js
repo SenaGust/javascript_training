@@ -1,5 +1,5 @@
 const arraySortedNames = [
-    'Adam Pinkman',
+    'adam Pinkman',
     'Andrea Cantillo',
     'Bogdan Wolynetz',
     'Brandon Mayhew',
@@ -12,7 +12,7 @@ const arraySortedNames = [
     'Domingo Molina',
     'Donald Margolis',
     'Dr. Delcavoli',
-    'Duane Chow',
+    'duane Chow',
     'Eduardo Salamanca',
     'Elliot Schwartz',
     'Emilio Koyama',
