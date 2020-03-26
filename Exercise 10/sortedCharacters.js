@@ -7,7 +7,9 @@ async function sortedCharacters() {
         return data.name;
     });
 
-    return onlyNames.sort();
+    return onlyNames.sort((srtring1, srtring2) => {
+        return (srtring1.toLowerCase().localeCompare(srtring2.toLowerCase()));
+    });
 }
 
 export default sortedCharacters;
