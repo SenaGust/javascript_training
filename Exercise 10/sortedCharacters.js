@@ -8,7 +8,7 @@ async function sortedCharacters() {
     });
 
     return onlyNames.sort((srtring1, srtring2) => {
-        return (srtring1.toLowerCase().localeCompare(srtring2.toLowerCase()));
+        return (srtring1.localeCompare(srtring2, 'en', {sensitive: 'base'}));
     });
 }
 
