@@ -58,6 +58,6 @@ describe('function numberEpisodes', () => {
         const result = await groupEpisodes();
         
         expect(returnAllEpisodes).toHaveBeenCalledTimes(1);
-        expect(result).toEqual('');
+        expect(result).toEqual(expectedResult);
     });
 });
