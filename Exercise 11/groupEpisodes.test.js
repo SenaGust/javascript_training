@@ -5,11 +5,21 @@ jest.mock('./getAllEpisodes');
 
 describe('function numberEpisodes', () => {
     it('should return group episodes', async () => {
-        returnAllEpisodes.mockResolvedValueOnce(mockEpisodes);
+        const mock = [ 
+            {title: "Something"}, 
+            {title: "Something 2"}, 
+            {title: "Especial delivery"}
+        ];
+        const expectedResult = {
+            "E": 1,
+            "S": 2
+        };
+
+        returnAllEpisodes.mockResolvedValueOnce(mock);
     
         const result = await groupEpisodes();
-        console.log(result)
-        expect(returnAllEpisodes).toHaveBeenCalledTimes(1);
-        expect(result).toBe(mockEpisodes);
+
+        expected(returnAllEpisodes).toHaveBeenCalledTimes(1);
+        expect(result).toEqual(expectedResult);
     })
 });
