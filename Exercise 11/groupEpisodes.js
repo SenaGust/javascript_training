@@ -12,7 +12,8 @@ async function groupEpisodes() {
     let grouped = {};
 
     sortedTitles.map((title) => {
-           if(isNaN(grouped[title.charAt(0)])) {
+            title = title.toUpperCase();
+            if(isNaN(grouped[title.charAt(0)])) {
             Object.defineProperty(grouped, title.charAt(0), {
                     value: 1,
                     writable: true,
