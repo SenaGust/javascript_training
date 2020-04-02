@@ -5,6 +5,10 @@ jest.mock('../Exercise 9/getAllCharacters')
 import _ from 'lodash';
 jest.mock('lodash');
 
+beforeEach(() => {
+    returnAllCharacters.mockClear();
+});
+
 describe('function numberCharactersLodash', () => {
     it('should return 63', async () => {
         returnAllCharacters.mockResolvedValueOnce(mockCharacters);
@@ -16,5 +20,14 @@ describe('function numberCharactersLodash', () => {
         expect(_.size).toHaveBeenCalledWith(mockCharacters);
         expect(returnAllCharacters).toHaveBeenCalledTimes(1);
         expect(result).toBe(mockCharacters.length);
-    })
+    });
+    it('should return error', async () => {
+        const expectError = 'Deu erro';
+        returnAllCharacters.mockRejectedValueOnce('Deu erro');
+
+        const result = await numberCharactersLodash();
+
+        expect(returnAllCharacters).toHaveBeenCalledTimes(1);
+        expect(result).toBe(expectError);
+    });
 });
