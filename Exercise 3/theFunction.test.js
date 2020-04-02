@@ -12,21 +12,27 @@ beforeEach(() => {
 
 describe('function theFunction', () => {
     it('should return 100 when I pass 10', () => {
-      const usedParameter = 10;
+      const usedParameter = 10,
+      expectedResult = 100;
+      power.mockReturnValueOnce(100);
 
-      theFunction(power, usedParameter);
+      const result = theFunction(power, usedParameter);
       
       expect(tenTimes).toHaveBeenCalledTimes(0);
       expect(power).toHaveBeenCalledTimes(1);
       expect(power).toHaveBeenCalledWith(usedParameter);
+      expect(result).toBe(expectedResult);
     })
     it('should return 70 when I pass 7', () => {
-      const usedParameter = 7;
+      const usedParameter = 7,
+      expectedResult = 70;
+      tenTimes.mockReturnValueOnce(70);
 
-      theFunction(tenTimes, 7);
+      const result = theFunction(tenTimes, 7);
       
       expect(power).toHaveBeenCalledTimes(0);
       expect(tenTimes).toHaveBeenCalledTimes(1);
       expect(tenTimes).toHaveBeenCalledWith(usedParameter);
+      expect(result).toBe(expectedResult);
     })
 });
