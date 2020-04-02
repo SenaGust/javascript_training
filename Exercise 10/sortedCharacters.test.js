@@ -47,7 +47,7 @@ describe('function sortedCharacters', () => {
           {name: 'e'}, {name: 'f'}, {name: 'g'}, {name: 'h'},  
         ];
 
-      returnAllCharacters.mockRejectValue('Deu erro');
+      returnAllCharacters.mockRejectedValue('Deu erro');
 
       const result = await sortedCharacters();
 
