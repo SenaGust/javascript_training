@@ -1,8 +1,12 @@
 import returnAllCharacters from './getAllCharacters';
 
 async function numberCharacters() {
-    const characters = await returnAllCharacters();
-    return characters.length;
+    try {
+        const characters = await returnAllCharacters();
+        return characters.length;
+    } catch (error) {
+        return error;
+    }
 }
 
 export default numberCharacters;
