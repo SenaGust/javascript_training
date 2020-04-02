@@ -60,7 +60,7 @@ describe('function numberEpisodes', () => {
         expect(returnAllEpisodes).toHaveBeenCalledTimes(1);
         expect(result).toEqual(expectedResult);
     });
-    it('should return group episodes', async () => {
+    it('should return error', async () => {
         const expectedResult = 'Deu erro';
 
         returnAllEpisodes.mockRejectedValueOnce('Deu erro');
