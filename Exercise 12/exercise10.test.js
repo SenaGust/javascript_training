@@ -36,6 +36,14 @@ describe('function sortedCharacters', () => {
 
         expect(result).toEqual(expectedResult);
     });
+    it('should return error', async () => {
+      const expectedResult = 'Deu erro';
+      returnAllCharacters.mockRejectedValue('Deu erro');
+
+      const result = await sortedCharactersLodash();
+
+      expect(result).toEqual(expectedResult);
+  });
 });
 
 
