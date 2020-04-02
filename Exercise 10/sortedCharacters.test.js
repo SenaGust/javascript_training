@@ -37,21 +37,12 @@ describe('function sortedCharacters', () => {
         expect(result).toEqual(sortedAlphabet);
     });
     it('should return error', async () => {
-      const alphabet = [
-          { name: 'X'}, { name:'N'}, { name:'a'}, { name:'P'}, { name:'b'}, { name:'Y'}, { name:'F'}, { name:'c'},
-          { name:'J'}, { name:'i'}, { name:'d'}, { name:'j'}, { name:'A'}, { name:'k'}, { name:'l'}, { name:'R'},
-          { name:'M'}, { name:'B'}, { name:'m'}, { name:'G'}, { name:'K'}, { name:'n'}, { name:'E'}, { name:'o'},
-          { name:'p'}, { name:'q'}, { name:'Q'}, { name:'r'}, { name:'s'}, { name:'I'}, { name:'S'}, { name:'D'},
-          { name:'t'}, { name:'W'}, { name:'O'}, { name:'u'}, { name:'L'}, { name:'v'}, { name:'w'}, { name:'U'},
-          { name:'x'}, { name:'y'}, { name:'z'}, { name:'H'}, { name:'Z'}, {name: 'V'}, {name: 'T'}, {name: 'C'},
-          {name: 'e'}, {name: 'f'}, {name: 'g'}, {name: 'h'},  
-        ];
-
+      const expectedResult = 'Deu erro';
       returnAllCharacters.mockRejectedValue('Deu erro');
 
       const result = await sortedCharacters();
 
-      expect(result).toEqual('Deu erro');
+      expect(result).toEqual(expectedResult);
   });
 });
 
